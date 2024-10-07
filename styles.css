@@ -1,0 +1,242 @@
+/* ---------------- IMPORTED FONTS ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+/* ------------------ CSS RESET ------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+body {
+    line-height:1;
+}
+ol, ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* ---------------- ROOT VARIABLES ---------------- */
+:root {
+  font-family:"Bebas Neue", sans-serif;
+  --black:#0D0D0D;
+  --white:#F2F2F2;
+  --teal:#7ABFBF;
+  --aqua:rgba(122,191,191,0.50);
+  --orange:#EB5428;
+}
+/* ------ GLOBAL STYLES (mobile first/small) ------ */ 
+* {
+  box-sizing:boder-box;
+}
+
+html {
+  background-color:var(--aqua);
+}
+
+body {
+  min-width:414px;
+  grid-template-columns:repeat(2,1fr);
+  margin-left:2em;
+  margin-right:2em;
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+header {
+  background-color:var(--white);
+  color:var(--black);
+}
+
+ul {
+  display:flex;
+}
+
+nav {
+  
+}
+
+a {
+  display:block;
+  background-color:var(--                    );
+  text-align:center;
+  text-decoration:none;
+  margin:0 auto;
+}
+
+
+a:hover {
+  color:var(--aqua);
+}
+#details {
+  display:flex;
+}
+
+#ingredients {
+  display:flex;
+  flex-direction:column;
+}
+
+#ingredients ul {
+  list-style:square;
+}
+
+#top a {
+  background-color:var(--black);
+}
+
+h1 {
+  font-size:40px;
+}
+
+h2 {
+  font-size:30px;
+}
+
+h3 {
+  font-size:25px;
+}
+
+nav a {
+  font-size:20px;
+}
+
+nav span {
+  font-size:20px;
+}
+
+menu li {
+  font-size:20px;
+}
+
+#social li {
+  font-size:20px;
+}
+
+footer {
+  font-size:20px;
+}
+
+/* Monserrat — Regular */
+p {
+  font-size:16px;
+}
+
+dd {
+  font-size:16px;
+}
+
+li {
+  font-size:16px;
+}
+
+nav {
+  font-size:16px;
+}
+
+input {
+  font-size:16px;
+}
+
+/* Monserrat — Bold */
+dt {
+  font-size:16px;
+}
+
+nav {
+    grid-area: nav;
+    min-width: 414px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px #bbb;
+    position: fixed;
+    top: 0;
+    z-index:5;
+}
+nav ul {
+    grid-area: hamberger;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+}
+nav li img {
+    display: none;
+}
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    position: relative;
+    bottom: 5px;
+    left: 30px;
+}
+nav span {
+    display: block;
+    position: relative;
+ }
+nav label svg {
+    display: block;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 550px;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+/* ------------- MEDIA QUERY (medium) ------------- */ 
+/* -------------- MEDIA QUERY (large) ------------- */ 
+
