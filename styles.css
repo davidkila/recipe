@@ -74,109 +74,33 @@ body {
   margin-right:2em;
 }
 
-main {
-  background-color:var(--white);
-  grid-template-columns:1fr;
-}
-
 header {
+  display:flex;
   background-color:var(--white);
   color:var(--black);
+  text-align:center;
+  font-family:"Bebas Neue";
+  padding:10px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
 }
 
 ul {
   display:flex;
+  flex-direction:row;
+  justify-content:center;
 }
 
-nav {
-  
-}
-
-a {
-  display:block;
-  background-color:var(--                    );
-  text-align:center;
-  text-decoration:none;
-  margin:0 auto;
-}
-
-
-a:hover {
-  color:var(--aqua);
-}
-#details {
+#quick-links {
   display:flex;
+  flex-direction:row;
 }
 
-#ingredients {
-  display:flex;
-  flex-direction:column;
-}
-
-#ingredients ul {
-  list-style:square;
-}
-
-#top a {
-  background-color:var(--black);
-}
-
-h1 {
-  font-size:40px;
-}
-
-h2 {
-  font-size:30px;
-}
-
-h3 {
-  font-size:25px;
-}
-
-nav a {
-  font-size:20px;
-}
-
-nav span {
-  font-size:20px;
-}
-
-menu li {
-  font-size:20px;
-}
-
-#social li {
-  font-size:20px;
-}
-
-footer {
-  font-size:20px;
-}
-
-/* Monserrat — Regular */
-p {
-  font-size:16px;
-}
-
-dd {
-  font-size:16px;
-}
-
-li {
-  font-size:16px;
-}
-
-nav {
-  font-size:16px;
-}
-
-input {
-  font-size:16px;
-}
-
-/* Monserrat — Bold */
-dt {
-  font-size:16px;
+#quick-links a {
+  font-family:"Bebas Neue";
+  justify-content:space-evenly;
 }
 
 nav {
@@ -237,6 +161,189 @@ nav h2 {
     height: 1px;
     width: 1px;
 }
+
+a {
+  display:block;
+  color:var(--orange);
+  justify-items:center;
+  text-decoration:none;
+  margin:0 auto;
+}
+
+a:hover {
+  color:var(--aqua);
+}
+
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+h1 {
+  font-size:40px;
+}
+
+h2 {
+  text-align:center;
+  font-size:30px;
+  margin-top:1em;
+  margin-bottom:0.50em;
+}
+
+h3 {
+  font-size:25px;
+}
+
+header, footer {
+  background-color:var(--teal);
+  color:var(--black);
+}
+
+#details {
+  display:grid;
+  text-align:center;
+  grid-template-columns:repeat(1,1fr);
+}
+
+#details div {
+  display:flex;
+  margin-left:10px;
+}
+
+#details dd {
+  padding-right:10px;
+}
+
+#ingredients {
+  display:grid;
+  text-align:center;
+  grid-template-columns:repeat(1,1fr);
+}
+
+#ingredients ul {
+  display:grid;
+  text-align:left;
+  grid-template-columns:repeat(1,1fr);
+  margin-left:25px;
+  line-height:30px;
+}
+
+#ingredients li {
+    list-style:square;
+}
+
+#directions {
+  display:grid;
+  text-align:center;
+  grid-template-columns:repeat(1,1fr);
+}
+
+#directions ul {
+  display:grid;
+  text-align:left;
+  grid-template-columns:repeat(1,1fr);
+  margin-left:25px;
+  line-height:30px;
+}
+
+#directions div {
+  display:flex;
+  margin-left:10px;
+}
+
+aside {
+  grid-template-columns:1fr;
+  background-color:(--teal);
+}
+
+aside h2 {
+  margin-top:20px;
+}
+
+aside img {
+  display:flex;
+  flex-direction:column;
+}
+
+menu li {
+  font-size:20px;
+}
+
+#social li {
+  font-family:"Bebas Neue";
+  font-size:20px;
+}
+
+p {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+dd {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+li {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+input {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+dt {
+  font-family:"Montserrat";
+  font-weight:700;
+  font-size:16px;
+}
+
+footer {
+  display:flex;
+  background-color:var(--white);
+  align-content:center;
+  align-items:center;
+  justify-content:center;
+  justify-items:center;
+  margin:0 auto;
+  flex-direction:column;
+  padding-top:20px;
+  margin-bottom:7px;
+  font-size:20px;
+}
+
+input {
+  border:2px solid var(--orange);
+  padding:10px 20px;
+}
+
+::placeholder {
+  text-align:left;
+}
+
+#social {
+  display:grid;
+}
+
+small {
+  text-align:center;
+}
+
+.star-1, .star-2, .star-3, .star-4 {
+  fill:var(--orange);
+}
+
+#star-5 {
+  fill:var(--orange);
+}
+
+
 /* ------------- MEDIA QUERY (medium) ------------- */ 
 /* -------------- MEDIA QUERY (large) ------------- */ 
 
