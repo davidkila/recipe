@@ -59,14 +59,17 @@ table {
   --orange:#EB5428;
 }
 /* ------ GLOBAL STYLES (mobile first/small) ------ */ 
+/* ✅ */ 
 * {
-  box-sizing:boder-box;
+  box-sizing:border-box;
 }
 
+/* ✅ */ 
 html {
   background-color:var(--aqua);
 }
 
+/* ✅ */ 
 body {
   min-width:414px;
   grid-template-columns:repeat(2,1fr);
@@ -74,35 +77,13 @@ body {
   margin-right:2em;
 }
 
-header {
-  display:flex;
-  background-color:var(--white);
-  color:var(--black);
-  text-align:center;
-  font-family:"Bebas Neue";
-  padding:10px;
-  margin-top:0px;
-  margin-bottom:0px;
-  margin-left:0px;
-  margin-right:0px;
+/* ✅ */ 
+main li {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
 }
-
-ul {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-}
-
-#quick-links {
-  display:flex;
-  flex-direction:row;
-}
-
-#quick-links a {
-  font-family:"Bebas Neue";
-  justify-content:space-evenly;
-}
-
+/* ------------- FROM SLACK (start) ------------- */ 
 nav {
     grid-area: nav;
     min-width: 414px;
@@ -112,6 +93,7 @@ nav {
     top: 0;
     z-index:5;
 }
+
 nav ul {
     grid-area: hamberger;
     padding: 0;
@@ -120,14 +102,17 @@ nav ul {
     overflow: hidden;
     max-height: 0;
 }
+
 nav li img {
     display: none;
 }
+
 nav li a {
     display: block;
     padding: 20px;
     text-decoration: none;
 }
+
 nav label {
     cursor: pointer;
     display: inline-block;
@@ -136,13 +121,16 @@ nav label {
     bottom: 5px;
     left: 30px;
 }
+
 nav span {
     display: block;
     position: relative;
  }
+
 nav label svg {
     display: block;
 }
+
 label span:before, label span:after {
     content: '';
     display: block;
@@ -150,33 +138,28 @@ label span:before, label span:after {
     position: absolute;
     width: 100%;
 }
+
 nav input {
     display: none;
 }
+
 nav input:checked ~ ul {
     max-height: 550px;
 }
+
 nav h2 {
     visibility: hidden;
     height: 1px;
     width: 1px;
 }
-
-a {
-  display:block;
-  color:var(--orange);
-  justify-items:center;
-  text-decoration:none;
-  margin:0 auto;
+/* ------------- FROM SLACK (end) ------------- */ 
+/* ✅ */ 
+#logo {
+  background-color:var(--orange)
 }
 
 a:hover {
   color:var(--aqua);
-}
-
-main {
-  background-color:var(--white);
-  grid-template-columns:1fr;
 }
 
 h1 {
@@ -194,31 +177,117 @@ h3 {
   font-size:25px;
 }
 
-header, footer {
-  background-color:var(--teal);
+p {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+dd {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+dt {
+  font-family:"Montserrat";
+  font-weight:700;
+  font-size:16px;
+}
+
+img {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+/* ------ HEADER ------ */ 
+header {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--white);
   color:var(--black);
+  text-align:center;
+  margin-top:6.25em;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  padding:0.75em;
+}
+
+header img {
+  margin-top:1em;
+}
+
+header p {
+  text-align:left;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+menu {
+  display:flex;
+}
+/* how do I get the text to come closeer to Author and Servings? */
+menu a, footer a {
+  display:block;
+  color:var(--orange);
+  text-decoration:none;
+  margin:0 auto;
+}
+
+menu li {
+  list-style:none;
+  margin:0 auto;
+}
+
+menu li, footer li {
+  font-size:20px;
+
+  margin-top:1em;
+}
+
+form {
+  display:flex;
+}
+input {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+  border:2px solid var(--orange);
+  padding:10px 20px;
+}
+
+::placeholder {
+  text-align:left;
+}
+
+button {
+  background-color:var(--orange);
+  border:none;
+}
+
+button svg {
+  stroke:white;
+}
+/* ------ MAIN ------ */ 
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
 }
 
 #details {
-  display:grid;
-  text-align:center;
-  grid-template-columns:repeat(1,1fr);
+  margin-top:-2em;
 }
 
-#details div {
-  display:flex;
+#details dl {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  text-align:left;
   margin-left:10px;
+  margin-right:37em;
 }
 
-#details dd {
-  padding-right:10px;
-}
-
-#ingredients {
-  display:grid;
-  text-align:center;
-  grid-template-columns:repeat(1,1fr);
-}
 
 #ingredients ul {
   display:grid;
@@ -232,116 +301,118 @@ header, footer {
     list-style:square;
 }
 
-#directions {
-  display:grid;
-  text-align:center;
-  grid-template-columns:repeat(1,1fr);
-}
-
-#directions ul {
+#directions ol {
   display:grid;
   text-align:left;
   grid-template-columns:repeat(1,1fr);
   margin-left:25px;
   line-height:30px;
 }
+/* ------ END MAIN ------ */ 
 
-#directions div {
-  display:flex;
-  margin-left:10px;
-}
-
+/* ------ START ASIDE ------ */ 
 aside {
-  grid-template-columns:1fr;
-  background-color:(--teal);
+  display:grid;
+  grid-template-columns:1fr, 3fr;
+  background-color:var(--aqua);
+  padding:10px;
+  padding-top:1em;
 }
 
 aside h2 {
-  margin-top:20px;
+  margin-top:0px;
 }
 
-aside img {
-  display:flex;
-  flex-direction:column;
+aside h4 {
+  display:none;
 }
 
-menu li {
-  font-size:20px;
+aside dl {
+  display:none;
 }
 
-#social li {
-  font-family:"Bebas Neue";
-  font-size:20px;
+aside svg {
+  fill:var(--orange);
 }
 
-p {
-  font-family:"Montserrat";
-  font-weight:400;
-  font-size:16px;
+.star-5 {
+  fill:white;
 }
 
-dd {
-  font-family:"Montserrat";
-  font-weight:400;
-  font-size:16px;
+#salsa-star-5 {
+  fill:var(--orange);
 }
+/* ------ END ASIDE ------ */ 
 
-li {
-  font-family:"Montserrat";
-  font-weight:400;
-  font-size:16px;
-}
-
-input {
-  font-family:"Montserrat";
-  font-weight:400;
-  font-size:16px;
-}
-
-dt {
-  font-family:"Montserrat";
-  font-weight:700;
-  font-size:16px;
-}
-
+/* ------ START FOOTER ------ */ 
 footer {
   display:flex;
-  background-color:var(--white);
-  align-content:center;
-  align-items:center;
-  justify-content:center;
-  justify-items:center;
-  margin:0 auto;
   flex-direction:column;
+  text-align:center;
+  background-color:var(--white);
+  color:var(--black);
+  margin:0 auto;
   padding-top:20px;
   margin-bottom:7px;
   font-size:20px;
 }
 
-input {
-  border:2px solid var(--orange);
-  padding:10px 20px;
+footer h2 {
+  display:none;
 }
 
-::placeholder {
-  text-align:left;
+#social  {
+  display:flex;
 }
 
-#social {
-  display:grid;
+#copyright  {
+  display:flex;
+  flex-direction:column;
+}
+
+
+#social li {
+  font-family:"Bebas Neue";
+  list-style:none;
+  margin:0 auto;
+  margin-top:1em;
 }
 
 small {
   text-align:center;
 }
 
-.star-1, .star-2, .star-3, .star-4 {
-  fill:var(--orange);
+footer img {
+  padding:15px;
 }
 
-#star-5 {
-  fill:var(--orange);
+footer h3 {
+  display:none;
 }
+/* ------ END FOOTER ------ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------- MEDIA QUERY (medium) ------------- */ 
