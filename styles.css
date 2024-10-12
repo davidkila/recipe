@@ -480,6 +480,10 @@ footer {
   flex-direction:row-reverse;
   margin-right:50em;
 }
+}
+
+
+
 
 /* -------------- MEDIA QUERY (large) ------------- */ 
 @media screen and (min-width:1280px) {
@@ -500,7 +504,7 @@ header {
 menu {
   display:flex;
   flex-direction:column;
-  border:2px solid blue;
+  border:2px solid var(--orange);
   background-color:white;
   margin-left:-0.75em;
   margin-right:4em;
@@ -535,6 +539,7 @@ main {
   text-align:center;
   background-color:black;
   color:var(--teal);
+  padding-bottom:1em;
 }
   
 aside {
@@ -557,19 +562,17 @@ aside svg {
   display:flex;
   flex-direction:column;
 }
-  
-footer {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-}
 
+footer {
+  display:block;
+  flex-direction:row-reverse;
+  margin-right:50em;
+  width:100%;
+}
+  
 .rating {
   display:flex;
   flex-direction:row-reverse;
-  margin:0 auto;
+  justify-content:left;
 }
 }
-
-
-
-
