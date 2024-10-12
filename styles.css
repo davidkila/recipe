@@ -140,13 +140,16 @@ label span:before, label span:after {
     width: 100%;
 }
 
-nav input {
+#dropdown {
     display: none;
 }
 
 nav input:checked ~ ul {
     max-height: 550px;
+    display:none;
 }
+
+
 
 nav h2 {
     visibility: hidden;
@@ -431,6 +434,53 @@ st
 body {
   min-width:768px;
 }
+  
+
+main  {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+  
+
+#details {
+  grid-column:1/-1;
+  text-align:center;
+}
+
+
+#details dl {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  margin:0 auto;
+  margin-left:0em;
+  margin-right:0em;
+}
+  
+h1 {
+  text-align:left;  
+}
+  
+
+  
+aside {
+   display:grid;
+  grid-template-columns:repeat(2,1fr); 
+}
+  
+aside section {
+  display:grid;
+  grid-template-columns:1fr 3fr;
+}
+
+aside h2 {
+  grid-column:1/-1;
+  text-align:center;
+}
+  
+footer {
+  display:flex;
+  flex-direction:row-reverse;
+  margin-right:50em;
 }
 
 /* -------------- MEDIA QUERY (large) ------------- */ 
@@ -439,4 +489,525 @@ body {
 body {
   min-width:1280px;
 }
+  
+
+  /* ---------------- IMPORTED FONTS ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+/* ------------------ CSS RESET ------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+body {
+    line-height:1;
+}
+ol, ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* ---------------- ROOT VARIABLES ---------------- */
+:root {
+  font-family:"Bebas Neue", sans-serif;
+  --black:#0D0D0D;
+  --white:#F2F2F2;
+  --teal:#7ABFBF;
+  --aqua:rgba(122,191,191,0.50);
+  --orange:#EB5428;
+}
+/* ------ GLOBAL STYLES (mobile first/small) ------ */ 
+/* ✅ */ 
+* {
+  box-sizing:border-box;
+}
+
+/* ✅ */ 
+html {
+  background-color:var(--aqua);
+}
+
+/* ✅ */ 
+body {
+  min-width:414px;
+  grid-template-columns:repeat(2,1fr);
+  margin-left:2em;
+  margin-right:2em;
+  bargin-bottom:1em;
+}
+
+/* ✅ */ 
+main li {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+/* ------------- FROM SLACK (start) ------------- */ 
+nav {
+    grid-area: nav;
+    min-width: 414px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px #bbb;
+    position: fixed;
+    top: 0;
+    z-index:5;
+}
+
+nav ul {
+    grid-area: hamberger;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+}
+
+nav li img {
+    display: none;
+}
+
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    position: relative;
+    bottom: 5px;
+    left: 30px;
+}
+
+nav span {
+    display: block;
+    position: relative;
+ }
+
+nav label svg {
+    display: block;
+}
+
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#dropdown {
+    display: none;
+}
+
+nav input:checked ~ ul {
+    max-height: 550px;
+    display:none;
+}
+
+
+
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+/* ------------- FROM SLACK (end) ------------- */ 
+/* ✅ */ 
+#logo {
+  background-color:var(--orange)
+}
+
+a:hover {
+  color:var(--aqua);
+}
+
+h1 {
+  font-size:40px;
+}
+
+h2 {
+  text-align:center;
+  font-size:30px;
+  margin-top:1em;
+  margin-bottom:0.50em;
+}
+
+h3 {
+  font-size:25px;
+}
+
+p {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+  line-height:1.50em;
+}
+
+dd {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+}
+
+dt {
+  font-family:"Montserrat";
+  font-weight:700;
+  font-size:16px;
+}
+
+img {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+  width:100%;
+}
+
+/* ------ HEADER ------ */ 
+header {
+  display:flex;
+  flex-direction:column;
+  background-color:var(--white);
+  color:var(--black);
+  text-align:center;
+  margin-top:6.25em;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  padding:0.75em;
+}
+
+header img {
+  margin-top:1em;
+}
+
+header p {
+  text-align:left;
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+menu {
+  display:flex;
+}
+
+/* how do I get the text to come closeer to Author and Servings? */
+menu a, footer a {
+  display:block;
+  color:var(--orange);
+  text-decoration:none;
+  margin:0 auto;
+}
+
+menu li {
+  list-style:none;
+  margin:0 auto;
+}
+
+menu li, footer li {
+  font-size:20px;
+
+  margin-top:1em;
+}
+
+form {
+  display:flex;
+}
+input {
+  font-family:"Montserrat";
+  font-weight:400;
+  font-size:16px;
+  border:2px solid var(--orange);
+  padding:10px 20px;
+}
+
+::placeholder {
+  text-align:left;
+}
+
+button {
+  background-color:var(--orange);
+  border:none;
+}
+
+button svg {
+  stroke:white;
+}
+/* ------ MAIN ------ */ 
+main {
+  background-color:var(--white);
+  grid-template-columns:1fr;
+}
+
+#details {
+  margin-top:-2em;
+}
+
+#details dl {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  text-align:center;
+  margin-left:10px;
+  margin-right:37em;
+  gap:5px;
+}
+
+#ingredients ul {
+  display:grid;
+  text-align:left;
+  grid-template-columns:repeat(1,1fr);
+  margin-left:25px;
+  line-height:30px;
+}
+
+#ingredients li {
+    list-style:square;
+}
+
+#directions ol {
+  display:grid;
+  text-align:left;
+  grid-template-columns:repeat(1,1fr);
+  margin-left:25px;
+  line-height:30px;
+}
+/* ------ ASIDE ------ */ 
+aside {
+  background-color:var(--aqua);
+  line-height:1.75em;
+  padding:10px;
+  padding-top:1em;
+}
+
+aside section {
+  display:grid;
+  grid-template-columns:1fr 3fr;
+}
+  
+aside h2 {
+  margin-top:0px;
+}
+
+aside h4 {
+  display:none;
+}
+
+aside dl {
+  display:none;
+}
+
+.rating {
+  display:flex;
+}
+
+aside svg {
+  fill:var(--orange);
+}
+
+.star-5 {
+  fill:white;
+}
+
+#salsa-star-5 {
+  fill:var(--orange);
+}
+/* ------ FOOTER ------ */ 
+footer {
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  background-color:var(--white);
+  color:var(--black);
+  margin:0 auto;
+  padding-top:20px;
+  margin-bottom:7px;
+  font-size:20px;
+}
+
+footer img {
+
+  margin:0 auto;
+}
+
+footer h2 {
+  display:none;
+}
+
+footer h3 {
+  display:none;
+}
+
+footer img {
+  padding:15px;
+}
+
+#connect {
+  margin-top:-0.25em;
+}
+
+#connect, #copyright {
+  background-color:white;
+}
+
+#social  {
+  display:flex;
+}
+
+#social li {
+  font-family:"Bebas Neue";
+  list-style:none;
+  margin:0 auto;
+  margin-top:1em;
+}
+
+#copyright  {
+  display:flex;
+  flex-direction:column;
+}
+
+st
+#mexican-rice img {
+  width:25%;
+}
+#salsa img {
+  width:25%;
+}
+
+#guacamole img {
+  width:25%;
+}
+
+#tortillas img {
+  width:25%;
+}
+
+
+#copyright img {
+  width:10%;
+}
+
+/* -------------- MEDIA QUERY (large) ------------- */ 
+@media screen and (min-width:1280px) {
+
+body {
+  min-width:1280px;
+}
+  
+h1 {
+  grid-column:1/-1;
+}
+  
+header {
+  display:grid;
+  grid-template-columns:1fr 4fr 3fr;
+}
+
+menu {
+  display:flex;
+  flex-direction:column;
+  border:2px solid blue;
+  background-color:white;
+  margin-left:-0.75em;
+  padding:0px;
+}
+  
+  #details {
+    display:grid;
+    justify-items:center;
+  } 
+  
+#details dl {
+  display:flex;
+  text-align:center;
+    margin:0 auto;
+  margin-left:10px;
+  margin-right:0em;
+  gap:5px;
+}
+  
+  main  {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+  
+
+#details {
+  grid-column:1/-1;
+  text-align:center;
+}
+  
+#details {
+  background-color:black;
+  color:var(--teal);
+}
+  
+  aside {
+   display:grid;
+  grid-template-columns:repeat(4,1fr); 
+}
+  
+aside section {
+  display:flex;
+  flex-direction:column;
+  grid-template-columns:1fr 3fr;
+}
+  
+
+aside h2 {
+  grid-column:1/-1;
+  text-align:center;
+}
+  
+
+aside svg {
+  display:flex;
+  flex-direction:column;
+}
+  
+  
+  footer {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+  
+
+  }
+  
 }
